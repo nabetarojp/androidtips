@@ -81,8 +81,8 @@ Android Studioテンプレートはテンプレート定義に[Freemarker](http:
 ```
 package ${packageName};
 
-import com.example.android.presentation.base.MvpPresenter;
-import com.example.presentation.base.MvpView;
+import com.mypackage.presentation.base.MvpPresenter;
+import com.mypackage.presentation.base.MvpView;
 
 public interface ${className}Contract{
 
@@ -100,7 +100,7 @@ public interface ${className}Contract{
 ```
 package ${packageName};
 
-import com.example.android.presentation.base.*;
+import com.mypackage.presentation.base.*;
 public class ${className}Activity extends BaseActivity implements ${className}Contract.View {
 
     ${classname}Contract.Presenter presenter;
@@ -125,7 +125,7 @@ public class ${className}Activity extends BaseActivity implements ${className}Co
 ```
 package ${packageName};
 
-import com.example.android.presentation.base.*;
+import com.mypackage.presentation.base.*;
 
 public class ${className}Presenter extends BasePresenter<${className}Contract.View> implements ${className}Contract.Presenter{
 
@@ -133,10 +133,10 @@ public class ${className}Presenter extends BasePresenter<${className}Contract.Vi
 ```
 
 - これを使用するには、Android Studioを再起動する必要があります。 再起動したら、テンプレートを作成するパッケージを右クリックし、以下のように「新規」メニューからパッケージを選択します。
-![](./assets/grouplivetemplate_1.png)
+![](./assets/grouplivetemplate_2.png)
 
 - 次に、template.xmlで求めた変数を入力するよう求められます
-![](./assets/grouplivetemplate_1.png)
+![](./assets/grouplivetemplate_3.png)
 
 - 新しいMVP機能に必要なすべてのクラスが生成されます。 同じ種類のクラスを作成していて、`Presenter`と`Activity`を互いにリンクさせる方法を調べなければならないことが分かりました。 これをテンプレートとして実装することにより、チーム全体がそれを使用できるようになり、標準化と新しいスクリーンやクラスの作成が容易になります。
 
